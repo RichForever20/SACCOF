@@ -11590,10 +11590,41 @@ header.masthead .masthead-heading {
     padding: 0 100px 20px 20px;
   }
 } */
+
+/* .team-carousel {
+  overflow: hidden; /* Hide overflow to create the slider effect */
+} */
+
+/* .team-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+} */
+
+
+
+
+
+
+
+
+
+.team-member {
+  flex: 0 0 100%; /*Default to 100% width for mobile view */
+  box-sizing: border-box;
+  padding: 0 10px;
+} 
+
+ @media (min-width: 768px) {
+  .team-member {
+      flex: 0 0 25%; /* 25% width for 4 members per slide on desktop */
+  }
+} 
+
 .team-member {
   margin-bottom: 3rem;
   text-align: center;
-}
+} 
 .team-member img {
   width: 14rem;
   height: 14rem;
@@ -11602,10 +11633,34 @@ header.masthead .masthead-heading {
 .team-member h4, .team-member .h4 {
   margin-top: 1.5rem;
   margin-bottom: 0;
-}
+} 
 
 .img-brand {
   height: 2.75rem;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+@media (min-width: 1200px) {
+  #teamm{
+    display: none;
+  }
 }
 
 section#contact {
@@ -11728,7 +11783,7 @@ body::-webkit-scrollbar {
   left: 0;
   right: 0;
   height: auto;
-  min-height: 60px;
+  min-height: 80px;
   transition: opacity 0.5s ease;
   z-index: 1000;
   opacity: 12;
@@ -11789,9 +11844,9 @@ body::-webkit-scrollbar {
 }
 
 .logo img {
-  height: auto;
+  height: 100px;
   width: 100%;
-  max-width: 150px;
+  max-width: 120px;
 }
 
 .nav-links a::after {

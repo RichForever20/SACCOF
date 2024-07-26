@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive 5 Column Layout</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+}
+
+.five-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.column {
+    background-color: #d9aa00;
+    color: white;
+    flex: 1;
+    min-width: 200px; /* Ensures columns are responsive */
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .column {
+        flex: 0 1 calc(33.33% - 20px); /* 3 columns on larger tablets */
+    }
+}
+
+@media (max-width: 900px) {
+    .column {
+        flex: 0 1 calc(50% - 20px); /* 2 columns on smaller tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .column {
+        flex: 0 1 calc(100% - 20px); /* 1 column on mobile devices */
+    }
+}
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 250, 205, 0.6); /* Lemon color overlay */
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.timeline-inverted {
+    flex-direction: row-reverse;
+}
+
+.timeline-image {
+    flex: 0 0 150px;
+    height: 150px;
+    margin-right: 30px;
+}
+
+.timeline-image img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.timeline-panel {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-heading h4 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #d9aa00;
+}
+
+.timeline-body {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timeline-inverted {
+        flex-direction: column;
+    }
+
+    .timeline-image {
+        margin: 0 0 20px;
+    }
+
+    .timeline-panel {
+        margin-bottom: 20px;
+    }
+}
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+    <section class="five-columns">
+        <div class="column">Column 1</div>
+        <div class="column">Column 2</div>
+        <div class="column">Column 3</div>
+        <div class="column">Column 4</div>
+        <div class="column">Column 5</div>
+    </section>
+    </div>
+
+
+
+
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="11" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="container" style="margin-top: 70px; position: relative; z-index: 1;">
+        <div class="text-center">
+            <h3 class="section-heading text-uppercase">Objectives and Purposes</h3>
+        </div><br><br><br>
+
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image">
+                    <img id="GIG" class="rounded-circle img-fluid" src="assets/img/sl_091920_35300_02.jpg" alt="...">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>To Organize</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">a forum for creation of awareness on the control of excess sugar and cholesterol in human body system.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <img id="GIG" class="rounded-circle img-fluid" src="assets/img/stacking-wooden-blocks-is-risk-creating-business-growth-ideas.jpg" alt="...">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>To Create</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">a forum for improving the standard of living of the people within our society.</p>
+                        <p class="text-muted">To Create and foster a spirit of understanding and gaining knowledge on lifestyle effects on health among the peoples in Africa and world over.</p>
+                        <p class="text-muted">To Create an avenue to provide empowerment for youth in health-related information technology.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image">
+                    <img id="GIG" class="rounded-circle img-fluid" src="assets/img/side-view-nurses-studying-together.jpg" alt="...">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>To Bring</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">To bring about avenue to build future leaders through health workshops and trainings.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <img id="GIG" class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="...">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>To Collaborate and Partner</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">To Collaborate and Partner with government agents both local and national, or international level as the need may be, to enhance its effects on the survival, development and protection of people in the society.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image">
+                    <img id="GIG" class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="...">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>To Provide</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">To Provide health support to the aged people and less privileged.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <img id="GIG" class="rounded-circle img-fluid DIG" src="assets/img/about/4.jpg" alt="...">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>To Encourage</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">To Encourage peace, unity and oneness among people.</p>
+                        <p class="text-muted">To Encourage service-minded people to serve their community and to encourage efficiency and promote high ethical standards in our health institutions, pharmaceutical industries, foods industries, and other related organizations both public works and private endeavors.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image">
+                    <img id="GIG" class="rounded-circle img-fluid" src="assets/img/businessman.jpg" alt="...">
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>To Discover and promote</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">To Discover and promote talent through several health technology trainings and competitions.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <h4>
+                        SACCOF
+                        <br />
+                        OBJECTIVES 
+                        <br />
+                        & PURPOSE
+                    </h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
